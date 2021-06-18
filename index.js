@@ -152,7 +152,7 @@ const myChartH2 = new Chart(barGraphHorizontal2, {
           "rgb(0, 191, 255)",
         ],
         borderWidth: 1,
-        barThickness: 50,
+        barThickness: 40,
       },
     ],
   },
