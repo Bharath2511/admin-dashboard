@@ -1,27 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -46,16 +32,16 @@
         >
           <img
             src="https://th.bing.com/th/id/OIP.LyqNyGU9u8kEpV6mdYVoQAAAAA?pid=ImgDet&rs=1"
-            class="logo-image mr-2"
+            class="logo-image m-1"
           />
-          <p id="prioritizeCount" class="prioritize-count mr-2 mt-auto mb-auto">
+          <p id="prioritizeCount" class="prioritize-count mt-auto m-1 mb-auto">
             2
           </p>
-          <p id="prioritizeText" class="prioritize-text mr-2 mt-auto mb-auto">
+          <p id="prioritizeText" class="prioritize-text mt-auto m-1 mb-auto">
             Prioritize
           </p>
-          <div class="vertical-line mt-auto mb-auto"></div>
-          <p class="ml-2 mt-auto mb-auto">Process Insights</p>
+          <div class="vertical-line mt-auto m-1 mb-auto"></div>
+          <p class="ml-2 mt-auto m-1 mb-auto">Process Insights</p>
         </div>
         <div
           id="dashboardInsightsContainer"
@@ -104,7 +90,7 @@
       >
         <div id="dashboardSummary" class="dashboard-summary container-fluid">
           <div class="row mb-3">
-            <div class="col">
+            <div class="col-12 col-md-6">
               <div class="toil-reduction-overview bg-primary text-white">
                 <p>Overview</p>
                 <ul class="overview-stats">
@@ -127,7 +113,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-md-6">
               <div class="toil-reduction-oppurtunity bg-primary text-white">
                 <p>Oppurtunity</p>
                 <ul class="oppurtunity-stats">
@@ -152,7 +138,7 @@
             </div>
           </div>
           <div class="row mb-3">
-            <div class="col">
+            <div class="col-12 col-md-6">
               <div class="toil-reduction-oppurtunities-process-container">
                 <p>Toil reduction oppurtunities by processes</p>
                 <p>
@@ -169,7 +155,7 @@
                 </div>  
               </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-md-6">
               <div class="toil-reduction-oppurtunities-process-container">
                 <p>Toil reduction oppurtunities by team/role/location</p>
                 <p>
@@ -187,14 +173,14 @@
             </div>
           </div>
         </div>
-        <div id="dashboardInsights" class="dashboard-insights container-fluid hide-item">
+         <div id="dashboardInsights" class="dashboard-insights container-fluid hide-item">
           <div class="row">
-            <div class="col">
+            <div class="col-12 col-md-6">
               <div class="graph-container border p-3 mt-3">
                 <canvas id="barGraph" class="graph"> </canvas>
               </div>
             </div>
-            <div class="col">
+            <div class="col-12 col-md-6">
               <div class="graph-container border p-3 mt-3">
                 <canvas id="pieGraph" class="graph"></canvas>
               </div>
@@ -206,12 +192,12 @@
           class="dashboard-insights-restricted container-fluid hide-item"
         >
         <div class="row">
-          <div class="col-12 col-sm-12 col-md-6">
+          <div class="col-12 col-md-6">
             <div class="graph-container border p-3 mt-3">
               <canvas id="doughnutGraph" class="graph"> </canvas>
             </div>
           </div>
-          <div class="col-12 col-sm-12 col-md-6">
+          <div class="col-12 col-md-6">
             <div class="graph-container border p-3 mt-3">
               <canvas id="lineGraph" class="graph"></canvas>
             </div>
@@ -219,7 +205,9 @@
       </div>
       </div>
     </div>
-    <script type="text/javascript" src="./index.js"></script>
+    </div>
+     <script type="text/javascript" src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
 </html>
 
