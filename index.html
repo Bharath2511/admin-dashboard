@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
+      integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div id="dashboardContainer" class="dashboard-container">
+      <div id="dashboardHeaderContainer" class="dashboard-header-container">
+        <div
+          id="dashboardNavbar"
+          class="dashboard-navbar d-flex align-items-center"
+        >
+          <img
+            src="https://th.bing.com/th/id/OIP.LyqNyGU9u8kEpV6mdYVoQAAAAA?pid=ImgDet&rs=1"
+            class="logo-image mr-2"
+          />
+          <p id="prioritizeCount" class="prioritize-count mr-2 mt-auto mb-auto">
+            2
+          </p>
+          <p id="prioritizeText" class="prioritize-text mr-2 mt-auto mb-auto">
+            Prioritize
+          </p>
+          <div class="vertical-line mt-auto mb-auto"></div>
+          <p class="ml-2 mt-auto mb-auto">Process Insights</p>
+        </div>
+        <div
+          id="dashboardInsightsContainer"
+          class="dashboard-insights-container"
+        >
+          <div class="dashboard-insights-navigator">
+            <i class="fas fa-long-arrow-alt-left mr-2"></i>
+            <span>Back</span>
+          </div>
+          <ul class="dashboard-insights-list-items">
+            <li
+              class="mr-4 dashboard-insights-item summary selected"
+              id="summary"
+            >
+              Summary
+            </li>
+            <li class="mr-4 dashboard-insights-item insights" id="insights">
+              Insights
+            </li>
+            <li
+              class="mr-4 dashboard-insights-item insights-restricted"
+              id="insightsRestricted"
+            >
+              Insights(Restricted Release)
+            </li>
+          </ul>
+        </div>
+        <div
+          class="dashboard-edit-container d-flex align-items-center justify-content-between"
+        >
+          <div class="dashboard-edit-icons">
+            <i class="edit-icon fas fa-expand"></i>
+            <i class="edit-icon far fa-share-square"></i>
+            <i class="edit-icon fas fa-external-link-alt"></i>
+            <i class="edit-icon fas fa-exclamation"></i>
+          </div>
+          <div class="dashboard-select-container">
+            <i class="far fa-hand-pointer mr-2"></i>
+            <span>Selections</span>
+          </div>
+        </div>
+      </div>
+      <div
+        id="dashboardBodySection"
+        class="dashboard-body-section pt-4"
+      >
+        <div id="dashboardSummary" class="dashboard-summary container-fluid">
+          <div class="row mb-3">
+            <div class="col">
+              <div class="toil-reduction-overview bg-primary text-white">
+                <p>Overview</p>
+                <ul class="overview-stats">
+                  <li class="stats-list-item">
+                    <h1 class="stats-heading">3149h</h1>
+                    <p class="stats-description">Total process effort</p>
+                  </li>
+                  <li class="stats-list-item">
+                    <h1 class="stats-heading">6</h1>
+                    <p class="stats-description">Process</p>
+                  </li>
+                  <li class="stats-list-item">
+                    <h1 class="stats-heading">3</h1>
+                    <p class="stats-description">Teams</p>
+                  </li>
+                  <li class="stats-list-item">
+                    <h1 class="stats-heading">40</h1>
+                    <p class="stats-description">Users</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col">
+              <div class="toil-reduction-oppurtunity bg-primary text-white">
+                <p>Oppurtunity</p>
+                <ul class="oppurtunity-stats">
+                  <li class="stats-list-item">
+                    <h1 class="stats-heading">59%</h1>
+                    <p class="stats-description">Total toil reduction</p>
+                  </li>
+                  <li class="stats-list-item">
+                    <h1 class="stats-heading">1862h</h1>
+                    <p class="stats-description">Total toil reduction</p>
+                  </li>
+                  <li class="stats-list-item">
+                    <h1 class="stats-heading">11%</h1>
+                    <p class="stats-description">By process improvement</p>
+                  </li>
+                  <li class="stats-list-item">
+                    <h1 class="stats-heading">49%</h1>
+                    <p class="stats-description">By automation</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <div class="toil-reduction-oppurtunities-process-container">
+                <p>Toil reduction oppurtunities by processes</p>
+                <p>
+                  Prioritized list of processes with highest toil reduction
+                  benefit
+                </p>
+                <div class="process-stats">
+                  <span class="process-stats-item default">Overall</span>
+                  <span class="process-stats-item">Process Improvement</span>
+                  <span class="process-stats-item">Automation</span>
+                </div>
+                <div class="graph-container border p-3 mt-3">
+                  <canvas id="barGraphHorizontal" class="graph"> </canvas>
+                </div>  
+              </div>
+            </div>
+            <div class="col">
+              <div class="toil-reduction-oppurtunities-process-container">
+                <p>Toil reduction oppurtunities by team/role/location</p>
+                <p>
+                  Prioritized list of teams/roles/locations with highest toil.
+                </p>
+                <div class="process-stats">
+                  <span class="process-stats-item default">Team</span>
+                  <span class="process-stats-item">Role</span>
+                  <span class="process-stats-item">Location</span>
+                </div>
+                <div class="graph-container border p-3 mt-3">
+                  <canvas id="barGraphHorizontal2" class="graph"> </canvas>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="dashboardInsights" class="dashboard-insights container-fluid hide-item">
+          <div class="row">
+            <div class="col">
+              <div class="graph-container border p-3 mt-3">
+                <canvas id="barGraph" class="graph"> </canvas>
+              </div>
+            </div>
+            <div class="col">
+              <div class="graph-container border p-3 mt-3">
+                <canvas id="pieGraph" class="graph"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+         <div
+          id="dashboardInsightsRestricted"
+          class="dashboard-insights-restricted container-fluid hide-item"
+        >
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="graph-container border p-3 mt-3">
+              <canvas id="doughnutGraph" class="graph"> </canvas>
+            </div>
+          </div>
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="graph-container border p-3 mt-3">
+              <canvas id="lineGraph" class="graph"></canvas>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>
+
